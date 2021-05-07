@@ -1,0 +1,98 @@
+<html>
+  <head>
+    <title>Angular Smart Tables</title>
+    <meta charset="UTF-8" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+  </head>
+
+  <body ng-app="app">
+    <div ng-controller="AppController">
+      <table id="exampleTable" st-table="rowCollection" class="table">
+        <thead>
+          <tr>
+            <th colspan="2">
+              <button class="btn btn-default" st-export="exampleTable">
+                Export
+              </button>
+            </th>
+            <th colspan="2">
+              <input
+                st-search
+                placeholder="Search all"
+                class="input-sm form-control"
+                type="search"
+              />
+            </th>
+          </tr>
+          <tr>
+            <th st-sort="id">id</th>
+            <th st-sort="lastName">Last Name</th>
+            <th st-sort="firstName">First Name</th>
+            <th st-sort="department">Department</th>
+            <th></th>
+          </tr>
+          <tr>
+            <th></th>
+            <th>
+              <input
+                st-search="lastName"
+                placeholder="Search by last name"
+                class="input-sm form-control"
+                type="search"
+              />
+            </th>
+            <th>
+              <input
+                st-search="firstName"
+                placeholder="Search by first name"
+                class="input-sm form-control"
+                type="search"
+              />
+            </th>
+            <th>
+              <input
+                st-search="department"
+                placeholder="Search by department"
+                class="input-sm form-control"
+                type="search"
+              />
+            </th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="row in rowCollection">
+            <td>{{ row.id }}</td>
+            <td>{{ row.lastName }}</td>
+            <td>{{ row.firstName }}</td>
+            <td>{{ row.department }}</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="4" class="text-right">
+              <div
+                st-pagination=""
+                st-items-by-page="itemsPerPage"
+                st-displayed-pages="maxDisplayedPages"
+              ></div>
+            </td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+
+    <script src="node_modules/angular"></script>
+    <script src="node_modules/angular-route"></script>
+    <script src="node_modules/angular-ui-router"></script>
+    <script src="node_modules/jquery-ui"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="node_modules/angular-bootstrap"></script>
+    <script src="node_modules/angular-smart-table"></script>
+    <script src="src/index.js"></script>
+  </body>
+</html>

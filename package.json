@@ -1,0 +1,26 @@
+{
+  "name": "angular-smart-tables",
+  "version": "1.0.0",
+  "description": "Example usage of angular-smart-tables directive",
+  "main": "index.html",
+  "scripts": {
+    "start": "parcel index.html --open",
+    "build": "parcel build index.html"
+  },
+  "dependencies": {
+    "angular": "1.7.8",
+    "angular-bootstrap": "0.12.2",
+    "angular-route": "1.7.8",
+    "angular-smart-table": "2.1.11",
+    "angular-ui-router": "1.0.22",
+    "bootstrap": "3.3.7",
+    "jquery": "2.1.4",
+    "jquery-ui": "1.10.5",
+    "lodash": "3.10.1",
+    "sass-bootstrap": "4.0.0-alpha.6.4"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.6.1"
+  },
+  "keywords": []
+}
